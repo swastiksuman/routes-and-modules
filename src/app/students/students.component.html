@@ -1,1 +1,3 @@
 <ng-select [items]="studentList" bindLabel="name" bindValue="id" [(ngModel)]="selectedStudent" ></ng-select>
+<button (click)="addStudent()" class="btn btn-primary">Add Student</button>
+<app-create-student *ngIf="showAdd===true"></app-create-student>

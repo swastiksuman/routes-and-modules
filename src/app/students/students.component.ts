@@ -14,11 +14,15 @@ export class StudentsComponent implements OnInit {
     {id: 4, name: 'Prem', class: '6B'}
   ];
 
-  selectedPerson: Student;
+  selectedStudent: Student;
+  showAdd = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  addStudent(){
+    this.showAdd = !this.showAdd;
+  }
 }
