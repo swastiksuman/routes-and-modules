@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Student } from '../student.model';
 
 @Component({
   selector: 'app-create-student',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateStudentComponent implements OnInit {
 
+  @Output()
+  createStudent = new EventEmitter<Student>();
+  newStudent: string;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  addStudent() {
+    this.createStudent.emit({id: 0, name: this.newStudent, class: 'XI'});
+  }
 }

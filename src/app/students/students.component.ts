@@ -25,4 +25,8 @@ export class StudentsComponent implements OnInit {
   addStudent(){
     this.showAdd = !this.showAdd;
   }
+
+  addStudentToList(student: Student) {
+    this.studentList = [...this.studentList, student];
+  }
 }
