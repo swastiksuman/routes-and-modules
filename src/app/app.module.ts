@@ -9,6 +9,7 @@ import { StudentsComponent } from './students/students.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateTeacherComponent } from './teachers/create-teacher/create-teacher.component';
 import { CreateStudentComponent } from './students/create-student/create-student.component';
+import { StudentViewComponent } from './students/student-view/student-view.component';
 
 const appRoutes: Routes = [
   { path: 'newTeacher', component: CreateTeacherComponent},
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     TeachersComponent,
     StudentsComponent,
     CreateTeacherComponent,
-    CreateStudentComponent
+    CreateStudentComponent,
+    StudentViewComponent
   ],
   imports: [
     BrowserModule,

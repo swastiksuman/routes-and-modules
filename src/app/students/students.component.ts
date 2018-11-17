@@ -14,8 +14,9 @@ export class StudentsComponent implements OnInit {
     {id: 4, name: 'Prem', class: '6B'}
   ];
 
-  selectedStudent: Student;
+  selectedStudent: Student = null;
   showAdd = false;
+  showView = false;
 
   constructor() { }
 
@@ -28,5 +29,10 @@ export class StudentsComponent implements OnInit {
 
   addStudentToList(student: Student) {
     this.studentList = [...this.studentList, student];
+  }
+
+  selectChange() {
+    console.log('select change');
+    this.showView = true;
   }
 }
