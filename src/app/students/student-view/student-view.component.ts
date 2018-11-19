@@ -9,9 +9,11 @@ import { Student } from '../student.model';
 export class StudentViewComponent implements OnInit {
 
   @Input()
-  studentData: Student;
+  studentData: number;
 
-  constructor() { }
+  constructor() {
+    console.log('student view called');
+  }
 
   ngOnInit() {
 

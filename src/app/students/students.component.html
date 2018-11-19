@@ -1,6 +1,7 @@
 <ng-select [items]="studentList" bindLabel="name" bindValue="id" [(ngModel)]="selectedStudent" ></ng-select>
 <button (click)="addStudent()" class="btn btn-primary">Add Student</button>
 <app-create-student (createStudent)="addStudentToList($event)" *ngIf="showAdd===true"></app-create-student>
-<div *ngIf="selectedStudent!=null">
+<div *ngIf="selectedStudent!==null">
+  {{ selectedStudent.name }}
 <app-student-view [studentData]="selectedStudent"></app-student-view>
 </div>
